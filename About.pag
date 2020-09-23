@@ -1,0 +1,354 @@
+VERSION 5.00
+Begin VB.PropertyPage About 
+   BackColor       =   &H00FFC0C0&
+   Caption         =   "About"
+   ClientHeight    =   5100
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   8505
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   5100
+   ScaleWidth      =   8505
+   Begin VB.Label lblProduct 
+      BackStyle       =   0  'Transparent
+      Caption         =   "EnigmaWare Inc Home Page"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   -1  'True
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00C00000&
+      Height          =   195
+      Left            =   1080
+      MouseIcon       =   "About.pgx":0000
+      MousePointer    =   99  'Custom
+      TabIndex        =   14
+      Tag             =   "http://homepage.ntlworld.com/mrenigma"
+      Top             =   3480
+      Width           =   2355
+   End
+   Begin VB.Label lblURL 
+      BackStyle       =   0  'Transparent
+      Caption         =   "http://homepage.ntlworld.com/mrenigma"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   -1  'True
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00C00000&
+      Height          =   195
+      Left            =   1080
+      MouseIcon       =   "About.pgx":030A
+      MousePointer    =   99  'Custom
+      TabIndex        =   13
+      Tag             =   "http://homepage.ntlworld.com/mrenigma"
+      Top             =   3930
+      Width           =   3870
+   End
+   Begin VB.Label lblCopyright 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Copyright © 2003 Absolute Genius"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   -1  'True
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00C00000&
+      Height          =   195
+      Left            =   1080
+      MouseIcon       =   "About.pgx":0614
+      MousePointer    =   99  'Custom
+      TabIndex        =   12
+      Tag             =   "http://homepage.ntlworld.com/mrenigma"
+      Top             =   3750
+      Width           =   3120
+   End
+   Begin VB.Label Label1 
+      BackStyle       =   0  'Transparent
+      Caption         =   "EnigmaWare Inc Presents"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FFFFFF&
+      Height          =   480
+      Index           =   0
+      Left            =   1410
+      TabIndex        =   11
+      Top             =   330
+      Width           =   3285
+   End
+   Begin VB.Shape shpRect 
+      BorderColor     =   &H008080FF&
+      BorderWidth     =   16
+      Height          =   945
+      Index           =   1
+      Left            =   225
+      Top             =   375
+      Width           =   975
+   End
+   Begin VB.Label lblInfo 
+      BackStyle       =   0  'Transparent
+      Caption         =   "OCX to connect to MSN ChatRoom Servers"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000000&
+      Height          =   495
+      Index           =   2
+      Left            =   2685
+      TabIndex        =   5
+      Top             =   1185
+      Width           =   2265
+   End
+   Begin VB.Label lblDotLine 
+      BackStyle       =   0  'Transparent
+      Caption         =   "................."
+      BeginProperty Font 
+         Name            =   "Times New Roman"
+         Size            =   24
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000000&
+      Height          =   495
+      Index           =   1
+      Left            =   4725
+      TabIndex        =   10
+      Top             =   225
+      Width           =   975
+   End
+   Begin VB.Label lblDescription 
+      BackStyle       =   0  'Transparent
+      Caption         =   "This OCX will allow you to connect to MSN Servers and receive events and get room properties without using MSN's own interface."
+      ForeColor       =   &H00000000&
+      Height          =   720
+      Index           =   0
+      Left            =   1095
+      TabIndex        =   7
+      Top             =   2025
+      Width           =   4260
+   End
+   Begin VB.Label lblDescription 
+      BackStyle       =   0  'Transparent
+      Caption         =   "With this OCX you are able to write your own chat client ."
+      ForeColor       =   &H00000000&
+      Height          =   330
+      Index           =   1
+      Left            =   1095
+      TabIndex        =   6
+      Top             =   2805
+      Width           =   4260
+   End
+   Begin VB.Image imgIcon 
+      Height          =   630
+      Left            =   375
+      Picture         =   "About.pgx":091E
+      Stretch         =   -1  'True
+      Top             =   525
+      Width           =   660
+   End
+   Begin VB.Line Line1 
+      BorderColor     =   &H00808080&
+      BorderStyle     =   6  'Inside Solid
+      Index           =   1
+      X1              =   1035
+      X2              =   5610
+      Y1              =   3150
+      Y2              =   3150
+   End
+   Begin VB.Label lblVersion 
+      AutoSize        =   -1  'True
+      BackStyle       =   0  'Transparent
+      Caption         =   "Version: 1.00"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   9
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000000&
+      Height          =   210
+      Left            =   1095
+      TabIndex        =   4
+      Top             =   3240
+      Width           =   1215
+   End
+   Begin VB.Image Image1 
+      Height          =   720
+      Left            =   1035
+      Picture         =   "About.pgx":17E8
+      Top             =   4185
+      Width           =   720
+   End
+   Begin VB.Label Label1 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Developed By Åß§ølµ†€•G€ñïµ§ 2002"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   285
+      Index           =   1
+      Left            =   1815
+      TabIndex        =   3
+      Top             =   4365
+      Width           =   3915
+   End
+   Begin VB.Label lblDotLine 
+      BackStyle       =   0  'Transparent
+      Caption         =   "  ........"
+      BeginProperty Font 
+         Name            =   "Times New Roman"
+         Size            =   24
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000000&
+      Height          =   495
+      Index           =   2
+      Left            =   4515
+      TabIndex        =   2
+      Top             =   885
+      Width           =   1245
+   End
+   Begin VB.Label lblInfo 
+      BackStyle       =   0  'Transparent
+      Caption         =   "ChatConnector"
+      BeginProperty Font 
+         Name            =   "Georgia"
+         Size            =   24
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000000&
+      Height          =   615
+      Index           =   1
+      Left            =   1395
+      TabIndex        =   1
+      Top             =   645
+      Width           =   4275
+   End
+   Begin VB.Label lblDotLine 
+      BackStyle       =   0  'Transparent
+      Caption         =   "................."
+      BeginProperty Font 
+         Name            =   "Times New Roman"
+         Size            =   24
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000000&
+      Height          =   495
+      Index           =   0
+      Left            =   585
+      TabIndex        =   0
+      Top             =   885
+      Width           =   2115
+   End
+   Begin VB.Label lblDescription 
+      BackColor       =   &H00C0C0C0&
+      ForeColor       =   &H00000000&
+      Height          =   780
+      Index           =   3
+      Left            =   1095
+      TabIndex        =   9
+      Top             =   1005
+      Width           =   4065
+   End
+   Begin VB.Label lblInfo 
+      BackColor       =   &H00FF8080&
+      Height          =   225
+      Index           =   4
+      Left            =   1095
+      TabIndex        =   8
+      Top             =   705
+      Width           =   4065
+   End
+   Begin VB.Shape shpRect 
+      BorderStyle     =   0  'Transparent
+      FillColor       =   &H008080FF&
+      FillStyle       =   0  'Solid
+      Height          =   585
+      Index           =   2
+      Left            =   4875
+      Top             =   345
+      Width           =   555
+   End
+   Begin VB.Shape shpRect 
+      BorderStyle     =   0  'Transparent
+      FillColor       =   &H008080FF&
+      FillStyle       =   0  'Solid
+      Height          =   585
+      Index           =   0
+      Left            =   4875
+      Top             =   1365
+      Width           =   555
+   End
+End
+Attribute VB_Name = "About"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+Private Sub lblCopyright_Click()
+      On Error Resume Next
+      ShellEx lblCopyright.Tag, , , , , PropertyPage.hwnd
+
+End Sub
+
+Private Sub lblURL_Click()
+      On Error Resume Next
+      ShellEx lblURL.Tag, , , , , PropertyPage.hwnd
+
+End Sub
+
+Private Sub PropertyPage_Initialize()
+lblVersion = "Version = " & App.Major & "." & App.Minor & "." & App.Revision
+End Sub
+

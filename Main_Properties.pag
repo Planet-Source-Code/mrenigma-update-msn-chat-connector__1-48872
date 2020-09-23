@@ -1,0 +1,624 @@
+VERSION 5.00
+Begin VB.PropertyPage Main_Properties 
+   Caption         =   "Main_Properties"
+   ClientHeight    =   5100
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   8505
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   5100
+   ScaleWidth      =   8505
+   Begin VB.Frame Frame2 
+      Caption         =   "Server Info"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000080&
+      Height          =   1695
+      Left            =   30
+      TabIndex        =   21
+      Top             =   3345
+      Width           =   8430
+      Begin VB.CommandButton cmdCLSID 
+         Caption         =   "Set CLSID"
+         Height          =   345
+         Left            =   6210
+         TabIndex        =   27
+         Top             =   1170
+         Width           =   945
+      End
+      Begin VB.CheckBox chkUseMSNChatX 
+         Caption         =   "Use MSNChatX control"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   3780
+         TabIndex        =   26
+         ToolTipText     =   "Requires no registering of MSNChat45.ocx and the MSNChatTest.OCX, Just Requires that MSNChatX.OCX is registered"
+         Top             =   1230
+         Width           =   2310
+      End
+      Begin VB.TextBox txtStartingSocket 
+         Height          =   330
+         Left            =   2385
+         TabIndex        =   13
+         ToolTipText     =   "This should be 6667 for the ChatText OCX method or any port for the MSNChatX ocx method"
+         Top             =   1200
+         Width           =   1305
+      End
+      Begin VB.TextBox txtServerAddress 
+         Height          =   330
+         Left            =   135
+         TabIndex        =   12
+         ToolTipText     =   "MSN Server Address - This is required"
+         Top             =   1185
+         Width           =   2190
+      End
+      Begin VB.TextBox txtOCXVersion 
+         Height          =   330
+         Left            =   135
+         TabIndex        =   10
+         ToolTipText     =   "OCX Version - This is required"
+         Top             =   525
+         Width           =   2190
+      End
+      Begin VB.TextBox txtOCXClsID 
+         Height          =   330
+         Left            =   2385
+         TabIndex        =   11
+         ToolTipText     =   "OCX ClsID - This is Required"
+         Top             =   540
+         Width           =   5145
+      End
+      Begin VB.Label lblStartingSocket 
+         AutoSize        =   -1  'True
+         Caption         =   "Port"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   2385
+         TabIndex        =   25
+         Top             =   990
+         Width           =   360
+      End
+      Begin VB.Label lblServerAddress 
+         AutoSize        =   -1  'True
+         Caption         =   "Server Address:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   135
+         TabIndex        =   24
+         Top             =   990
+         Width           =   1365
+      End
+      Begin VB.Label lblOCXVersion 
+         AutoSize        =   -1  'True
+         Caption         =   "OCXVersion:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   135
+         TabIndex        =   23
+         Top             =   315
+         Width           =   1080
+      End
+      Begin VB.Label lblOCXClsID 
+         AutoSize        =   -1  'True
+         Caption         =   "OCXClsID:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   2385
+         TabIndex        =   22
+         Top             =   330
+         Width           =   900
+      End
+   End
+   Begin VB.Frame Frame1 
+      Caption         =   "Room Information"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000080&
+      Height          =   3270
+      Left            =   30
+      TabIndex        =   14
+      Top             =   45
+      Width           =   8430
+      Begin VB.TextBox txtMSNREGCookie 
+         Height          =   495
+         Left            =   3825
+         MultiLine       =   -1  'True
+         TabIndex        =   7
+         Top             =   630
+         Width           =   4500
+      End
+      Begin VB.TextBox txtPassportTicket 
+         Height          =   495
+         Left            =   3825
+         MultiLine       =   -1  'True
+         TabIndex        =   8
+         Top             =   1320
+         Width           =   4500
+      End
+      Begin VB.TextBox txtPassportProfile 
+         Height          =   495
+         Left            =   3825
+         MultiLine       =   -1  'True
+         TabIndex        =   9
+         Top             =   2070
+         Width           =   4500
+      End
+      Begin VB.CheckBox chkUsePassPort 
+         Caption         =   "Use PassPort"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   3825
+         TabIndex        =   6
+         Top             =   150
+         Width           =   1620
+      End
+      Begin VB.TextBox txtRoomPassword 
+         Height          =   330
+         Left            =   90
+         TabIndex        =   5
+         Top             =   2115
+         Width           =   3510
+      End
+      Begin VB.CheckBox chkUseRoomPassWord 
+         Caption         =   "Use Room PassWord"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   90
+         TabIndex        =   4
+         Top             =   1665
+         Width           =   2295
+      End
+      Begin VB.CheckBox chkAutoJoinRoom 
+         Caption         =   "AutoJoin Room"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   90
+         TabIndex        =   3
+         Top             =   1425
+         Width           =   1755
+      End
+      Begin VB.CheckBox chkHexRoom 
+         Caption         =   "Hex Room"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   2340
+         TabIndex        =   1
+         Top             =   150
+         Width           =   1260
+      End
+      Begin VB.TextBox txtRoomName 
+         Height          =   330
+         Left            =   90
+         TabIndex        =   0
+         Top             =   450
+         Width           =   3510
+      End
+      Begin VB.TextBox txtNickName 
+         Height          =   330
+         Left            =   90
+         TabIndex        =   2
+         Top             =   1095
+         Width           =   3510
+      End
+      Begin VB.Image imgIcon 
+         Height          =   630
+         Left            =   7650
+         Picture         =   "Main_Properties.pgx":0000
+         Stretch         =   -1  'True
+         Top             =   2580
+         Width           =   660
+      End
+      Begin VB.Label lblMSNREGCookie 
+         AutoSize        =   -1  'True
+         Caption         =   "MSNREGCookie:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   3825
+         TabIndex        =   20
+         Top             =   435
+         Width           =   1455
+      End
+      Begin VB.Label lblPassportTicket 
+         AutoSize        =   -1  'True
+         Caption         =   "PassportTicket:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   3825
+         TabIndex        =   19
+         Top             =   1125
+         Width           =   1350
+      End
+      Begin VB.Label lblPassportProfile 
+         AutoSize        =   -1  'True
+         Caption         =   "PassportProfile:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   3825
+         TabIndex        =   18
+         Top             =   1860
+         Width           =   1350
+      End
+      Begin VB.Label lblRoomPassword 
+         Caption         =   "Room Password:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   240
+         Left            =   90
+         TabIndex        =   17
+         Top             =   1920
+         Width           =   2700
+      End
+      Begin VB.Label lblRoomName 
+         AutoSize        =   -1  'True
+         Caption         =   "Room Name:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   90
+         TabIndex        =   16
+         Top             =   240
+         Width           =   1095
+      End
+      Begin VB.Label lblNickName 
+         AutoSize        =   -1  'True
+         Caption         =   "Nick Name:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   90
+         TabIndex        =   15
+         Top             =   885
+         Width           =   1005
+      End
+   End
+End
+Attribute VB_Name = "Main_Properties"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+Private Sub chkUseMSNChatX_Click()
+      Changed = True
+      If chkUseMSNChatX.Value = 1 Then
+         cmdCLSID.Enabled = True
+      Else
+         cmdCLSID.Enabled = False
+      End If
+End Sub
+
+Private Sub chkUseRoomPassWord_Click()
+      Changed = True
+End Sub
+
+Private Sub cmdCLSID_Click()
+      txtOCXClsID = "ECCDBA05-B58F-4509-AE26-CF47B2FFC3FE"
+End Sub
+
+Private Sub PropertyPage_Initialize()
+      chkUsePassPort_Click
+End Sub
+
+Private Sub txtRoomPassword_Change()
+      Changed = True
+End Sub
+Private Sub chkAutoJoinRoom_Click()
+      Changed = True
+End Sub
+Private Sub txtPassportProfile_Change()
+      Changed = True
+End Sub
+Private Sub txtPassportTicket_Change()
+      Changed = True
+End Sub
+Private Sub txtMSNREGCookie_Change()
+      Changed = True
+End Sub
+Private Sub chkUsePassPort_Click()
+      Changed = True
+      ' ***-CodeSmart Linker TagStart | Please Do Not Modify
+      If chkUsePassPort.Value = 1 Then
+         txtMSNREGCookie.Enabled = True
+         txtPassportProfile.Enabled = True
+         txtPassportTicket.Enabled = True
+      Else
+         txtMSNREGCookie.Enabled = False
+         txtPassportProfile.Enabled = False
+         txtPassportTicket.Enabled = False
+      End If
+      ' ***-CodeSmart Linker TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtOCXClsID_Change()
+      Changed = True
+End Sub
+Private Sub txtOCXVersion_Change()
+      Changed = True
+End Sub
+Private Sub chkHexRoom_Click()
+      Changed = True
+End Sub
+Private Sub txtStartingSocket_Change()
+      Changed = True
+End Sub
+Private Sub txtServerAddress_Change()
+      Changed = True
+End Sub
+Private Sub txtNickName_Change()
+      Changed = True
+End Sub
+Private Sub txtRoomName_Change()
+      Changed = True
+End Sub
+Private Sub PropertyPage_ApplyChanges()
+      SelectedControls(0).UseRoomPassWord = (chkUseRoomPassWord.Value = vbChecked)
+      SelectedControls(0).RoomPassword = txtRoomPassword.Text
+      SelectedControls(0).AutoJoinRoom = (chkAutoJoinRoom.Value = vbChecked)
+      SelectedControls(0).PassportProfile = txtPassportProfile.Text
+      SelectedControls(0).PassportTicket = txtPassportTicket.Text
+      SelectedControls(0).MSNREGCookie = txtMSNREGCookie.Text
+      SelectedControls(0).UsePassPort = (chkUsePassPort.Value = vbChecked)
+      SelectedControls(0).OCXClsID = txtOCXClsID.Text
+      SelectedControls(0).OCXVersion = txtOCXVersion.Text
+      SelectedControls(0).HexRoom = (chkHexRoom.Value = vbChecked)
+      SelectedControls(0).Socket = txtStartingSocket.Text
+      SelectedControls(0).ServerAddress = txtServerAddress.Text
+      SelectedControls(0).NickName = txtNickName.Text
+      SelectedControls(0).RoomName = txtRoomName.Text
+      SelectedControls(0).UseMSNChatXOCX = (chkUseMSNChatX.Value = vbChecked)
+End Sub
+Private Sub PropertyPage_SelectionChanged()
+      chkUseRoomPassWord.Value = (SelectedControls(0).UseRoomPassWord And vbChecked)
+      txtRoomPassword.Text = SelectedControls(0).RoomPassword
+      chkAutoJoinRoom.Value = (SelectedControls(0).AutoJoinRoom And vbChecked)
+      txtPassportProfile.Text = SelectedControls(0).PassportProfile
+      txtPassportTicket.Text = SelectedControls(0).PassportTicket
+      txtMSNREGCookie.Text = SelectedControls(0).MSNREGCookie
+      chkUsePassPort.Value = (SelectedControls(0).UsePassPort And vbChecked)
+      txtOCXClsID.Text = SelectedControls(0).OCXClsID
+      txtOCXVersion.Text = SelectedControls(0).OCXVersion
+      chkHexRoom.Value = (SelectedControls(0).HexRoom And vbChecked)
+      txtStartingSocket.Text = SelectedControls(0).Socket
+      txtServerAddress.Text = SelectedControls(0).ServerAddress
+      txtNickName.Text = SelectedControls(0).NickName
+      txtRoomName.Text = SelectedControls(0).RoomName
+      chkUseMSNChatX.Value = (SelectedControls(0).UseMSNChatXOCX And vbChecked)
+      If chkUseMSNChatX.Value = 1 Then
+         cmdCLSID.Enabled = True
+      Else
+         cmdCLSID.Enabled = False
+      End If
+
+End Sub
+
+Private Sub txtMSNREGCookie_GotFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextGotFocus(txtMSNREGCookie)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtMSNREGCookie_LostFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextLostFocus(txtMSNREGCookie)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtNickName_GotFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextGotFocus(txtNickName)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtNickName_LostFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextLostFocus(txtNickName)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtOCXClsID_GotFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextGotFocus(txtOCXClsID)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtOCXClsID_LostFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextLostFocus(txtOCXClsID)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtOCXVersion_GotFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextGotFocus(txtOCXVersion)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtOCXVersion_LostFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextLostFocus(txtOCXVersion)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtPassportProfile_GotFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextGotFocus(txtPassportProfile)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtPassportProfile_LostFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextLostFocus(txtPassportProfile)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtPassportTicket_GotFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextGotFocus(txtPassportTicket)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtPassportTicket_LostFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextLostFocus(txtPassportTicket)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtRoomName_GotFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextGotFocus(txtRoomName)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtRoomName_LostFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextLostFocus(txtRoomName)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtRoomPassword_GotFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextGotFocus(txtRoomPassword)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtRoomPassword_LostFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextLostFocus(txtRoomPassword)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtServerAddress_GotFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextGotFocus(txtServerAddress)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtServerAddress_LostFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextLostFocus(txtServerAddress)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtStartingSocket_GotFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextGotFocus(txtStartingSocket)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
+Private Sub txtStartingSocket_LostFocus()
+      ' ***-CodeSmart Focus TagStart | Please Do Not Modify
+      Call TextLostFocus(txtStartingSocket)   ' Code Added By CodeSmart
+      ' ***-CodeSmart Focus TagEnd | Please Do Not Modify
+End Sub
